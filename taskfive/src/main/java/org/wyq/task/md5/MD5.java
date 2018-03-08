@@ -8,6 +8,8 @@ public class MD5 {
 
     public static String getResult(String inputStr) {
         BigInteger bigInteger = null;
+        //加盐
+        inputStr = "######" + inputStr + "&&&&&&&&";
         try {
             MessageDigest md = MessageDigest.getInstance(KEY_MD5);
             byte[] inputData = inputStr.getBytes();

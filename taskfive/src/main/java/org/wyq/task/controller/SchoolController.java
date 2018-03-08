@@ -102,6 +102,7 @@ public class SchoolController {
         String name = null;
         if (null != id && null != password && "" != id.toString() && "" != password) {
             String md = MD5.getResult(password);
+//            System.out.println(md);
             check = schoolService.check(id, md);
         }
         if (check) {

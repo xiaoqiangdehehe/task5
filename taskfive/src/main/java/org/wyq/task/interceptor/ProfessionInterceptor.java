@@ -18,7 +18,8 @@ public class ProfessionInterceptor extends HandlerInterceptorAdapter {
                 }
             }
         }
-        httpServletRequest.getRequestDispatcher("/school/sign_in").forward(httpServletRequest, httpServletResponse);
+//        httpServletRequest.getRequestDispatcher("/school/sign_in").forward(httpServletRequest, httpServletResponse);
+        httpServletResponse.sendRedirect("/school/sign_in");
         return false;
     }
 }
